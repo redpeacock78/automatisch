@@ -60,6 +60,15 @@ export default defineConfig({
           ],
         },
         {
+          text: 'Brave Search',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            { text: 'Actions', link: '/apps/brave-search/actions' },
+            { text: 'Connection', link: '/apps/brave-search/connection' },
+          ],
+        },
+        {
           text: 'Carbone',
           collapsible: true,
           collapsed: true,
@@ -187,6 +196,16 @@ export default defineConfig({
           ],
         },
         {
+          text: 'Gitea',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            { text: 'Triggers', link: '/apps/gitea/triggers' },
+            { text: 'Actions', link: '/apps/gitea/actions' },
+            { text: 'Connection', link: '/apps/gitea/connection' },
+          ],
+        },
+        {
           text: 'GitHub',
           collapsible: true,
           collapsed: true,
@@ -203,6 +222,16 @@ export default defineConfig({
           items: [
             { text: 'Triggers', link: '/apps/gitlab/triggers' },
             { text: 'Connection', link: '/apps/gitlab/connection' },
+          ],
+        },
+        {
+          text: 'Gmail',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            { text: 'Triggers', link: '/apps/gmail/triggers' },
+            { text: 'Connection', link: '/apps/gmail/connection' },
+            { text: 'Actions', link: '/apps/gmail/actions' },
           ],
         },
         {
@@ -329,6 +358,16 @@ export default defineConfig({
           items: [
             { text: 'Actions', link: '/apps/mistral-ai/actions' },
             { text: 'Connection', link: '/apps/mistral-ai/connection' },
+          ],
+        },
+        {
+          text: 'Monday',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            { text: 'Triggers', link: '/apps/monday/triggers' },
+            { text: 'Actions', link: '/apps/monday/actions' },
+            { text: 'Connection', link: '/apps/monday/connection' },
           ],
         },
         {

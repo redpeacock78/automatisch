@@ -149,6 +149,14 @@ const authorizationList = {
     action: 'read',
     subject: 'Flow',
   },
+  'PATCH /api/v1/flows/:flowId/folder': {
+    action: 'update',
+    subject: 'Flow',
+  },
+  'GET /api/v1/flows/:flowId/folder': {
+    action: 'read',
+    subject: 'Flow',
+  },
 };
 
 export const authorizeUser = async (request, response, next) => {
