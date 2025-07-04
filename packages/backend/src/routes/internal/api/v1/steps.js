@@ -1,14 +1,13 @@
 import { Router } from 'express';
-import { authenticateUser } from '../../../../helpers/authentication.js';
-import { authorizeUser } from '../../../../helpers/authorization.js';
-import getConnectionAction from '../../../../controllers/internal/api/v1/steps/get-connection.js';
-import testStepAction from '../../../../controllers/internal/api/v1/steps/test-step.js';
-import getPreviousStepsAction from '../../../../controllers/internal/api/v1/steps/get-previous-steps.js';
-import createDynamicFieldsAction from '../../../../controllers/internal/api/v1/steps/create-dynamic-fields.js';
-import createDynamicDataAction from '../../../../controllers/internal/api/v1/steps/create-dynamic-data.js';
-import deleteStepAction from '../../../../controllers/internal/api/v1/steps/delete-step.js';
-import updateStepAction from '../../../../controllers/internal/api/v1/steps/update-step.js';
-import executeStepAction from '../../../../controllers/internal/api/v1/steps/execute-step.js';
+import { authenticateUser } from '@/helpers/authentication.js';
+import { authorizeUser } from '@/helpers/authorization.js';
+import getConnectionAction from '@/controllers/internal/api/v1/steps/get-connection.js';
+import testStepAction from '@/controllers/internal/api/v1/steps/test-step.js';
+import getPreviousStepsAction from '@/controllers/internal/api/v1/steps/get-previous-steps.js';
+import createDynamicFieldsAction from '@/controllers/internal/api/v1/steps/create-dynamic-fields.js';
+import createDynamicDataAction from '@/controllers/internal/api/v1/steps/create-dynamic-data.js';
+import deleteStepAction from '@/controllers/internal/api/v1/steps/delete-step.js';
+import updateStepAction from '@/controllers/internal/api/v1/steps/update-step.js';
 
 const router = Router();
 
@@ -40,13 +39,6 @@ router.post(
   authenticateUser,
   authorizeUser,
   createDynamicDataAction
-);
-
-router.post(
-  '/:stepId/execute',
-  authenticateUser,
-  authorizeUser,
-  executeStepAction
 );
 
 router.patch('/:stepId', authenticateUser, authorizeUser, updateStepAction);
