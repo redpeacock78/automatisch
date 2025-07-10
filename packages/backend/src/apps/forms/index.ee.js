@@ -1,5 +1,7 @@
 import defineApp from '../../helpers/define-app.js';
 import triggers from './triggers/index.ee.js';
+import actions from './actions/index.ee.js';
+import dynamicData from './dynamic-data/index.js';
 
 export default defineApp({
   name: 'Forms',
@@ -12,4 +14,6 @@ export default defineApp({
   apiBaseUrl: '',
   primaryColor: '#0059F7',
   triggers,
+  actions,
+  dynamicData,
 });

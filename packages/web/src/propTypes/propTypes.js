@@ -474,3 +474,50 @@ export const NotificationPropType = PropTypes.shape({
   documentationUrl: PropTypes.string,
   description: PropTypes.string,
 });
+
+export const FormFieldPropType = PropTypes.shape({
+  key: PropTypes.string,
+  name: PropTypes.string,
+  type: PropTypes.oneOf([
+    'string',
+    'checkbox',
+    'dropdown',
+    'multiline',
+    'date',
+    'time',
+    'datetime',
+  ]),
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string,
+    })
+  ),
+  required: PropTypes.bool,
+  readonly: PropTypes.bool,
+  validationFormat: PropTypes.oneOf([
+    'email',
+    'url',
+    'tel',
+    'number',
+    'alphanumeric',
+    'custom',
+  ]),
+  validationPattern: PropTypes.string,
+  validationHelperText: PropTypes.string,
+});
+
+export const FormPropType = PropTypes.shape({
+  id: PropTypes.string,
+  name: PropTypes.string,
+  fields: PropTypes.arrayOf(FormFieldPropType),
+  updatedAt: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.instanceOf(Date),
+  ]),
+  createdAt: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.instanceOf(Date),
+  ]),
+});

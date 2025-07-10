@@ -2,9 +2,11 @@
 
 The following integrations are currently supported by Automatisch.
 
+- [Airbrake](/apps/airbrake/triggers)
 - [Airtable](/apps/airtable/actions)
 - [Anthropic](/apps/anthropic/actions)
 - [Appwrite](/apps/appwrite/triggers)
+- [Better Stack](/apps/better-stack/actions)
 - [Brave Search](/apps/brave-search/actions)
 - [Carbone](/apps/carbone/actions)
 - [ClickUp](/apps/clickup/triggers)
@@ -18,6 +20,7 @@ The following integrations are currently supported by Automatisch.
 - [Filter](/apps/filter/actions)
 - [Flickr](/apps/flickr/triggers)
 - [Formatter](/apps/formatter/actions)
+- [Frappe / ERPNext](/apps/frappe/actions)
 - [FreeScout](/apps/freescout/triggers)
 - [Ghost](/apps/ghost/triggers)
 - [Gitea](/apps/gitea/triggers)

@@ -26,12 +26,27 @@ export default defineConfig({
       },
       {
         text: 'Apps',
-        link: '/apps/airtable/connection',
+        link: '/apps/airbrake/connection',
         activeMatch: '/apps/',
       },
     ],
     sidebar: {
       '/apps/': [
+        {
+          text: 'Airbrake',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            {
+              text: 'Triggers',
+              link: '/apps/airbrake/triggers',
+            },
+            {
+              text: 'Connection',
+              link: '/apps/airbrake/connection',
+            },
+          ],
+        },
         {
           text: 'Airtable',
           collapsible: true,
@@ -57,6 +72,15 @@ export default defineConfig({
           items: [
             { text: 'Triggers', link: '/apps/appwrite/triggers' },
             { text: 'Connection', link: '/apps/appwrite/connection' },
+          ],
+        },
+        {
+          text: 'Better Stack',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            { text: 'Actions', link: '/apps/better-stack/actions' },
+            { text: 'Connection', link: '/apps/better-stack/connection' },
           ],
         },
         {
@@ -175,6 +199,15 @@ export default defineConfig({
           items: [
             { text: 'Actions', link: '/apps/formatter/actions' },
             { text: 'Connection', link: '/apps/formatter/connection' },
+          ],
+        },
+        {
+          text: 'Frappe / ERPNext',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            { text: 'Actions', link: '/apps/frappe/actions' },
+            { text: 'Connection', link: '/apps/frappe/connection' },
           ],
         },
         {

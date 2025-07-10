@@ -1,9 +1,10 @@
 import express, { Router } from 'express';
 import multer from 'multer';
+import cors from 'cors';
 
-import appConfig from '../config/app.js';
-import webhookHandlerByFlowId from '../controllers/webhooks/handler-by-flow-id.js';
-import webhookHandlerSyncByFlowId from '../controllers/webhooks/handler-sync-by-flow-id.js';
+import appConfig from '@/config/app.js';
+import webhookHandlerByFlowId from '@/controllers/webhooks/handler-by-flow-id.js';
+import webhookHandlerSyncByFlowId from '@/controllers/webhooks/handler-sync-by-flow-id.js';
 
 const router = Router();
 const upload = multer();
@@ -16,6 +17,15 @@ router.use(
     verify(req, res, buf) {
       req.rawBody = buf;
     },
+  })
+);
+
+router.use(
+  cors({
+    origin: '*',
+    methods: 'GET,HEAD,POST,PATCH,DELETE',
+    optionsSuccessStatus: 200,
+    exposedHeaders: ['X-Redirect-URL'],
   })
 );
 

@@ -15,6 +15,7 @@ import { FieldPropType } from 'propTypes/propTypes';
 
 const optionGenerator = (options) =>
   options?.map(({ name, value }) => ({ label: name, value: value }));
+
 function InputCreator(props) {
   const {
     onChange,
@@ -58,6 +59,7 @@ function InputCreator(props) {
         fields={schema.fields}
         shouldUnregister={shouldUnregister}
         stepId={stepId}
+        addButtonLabel={schema.addButtonLabel}
       />
     );
   }
